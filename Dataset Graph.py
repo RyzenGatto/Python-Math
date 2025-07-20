@@ -8,12 +8,12 @@ from pybaselines.whittaker import asls
 import os
 
 
-fileA = np.loadtxt(r"C:\Users\anwar\Desktop\NEWFOS DR.LUCAS GROUP FOLDER\Anwar Full Data (7-19\New (Summer) Data\Raman 7_10_25\GeTe2 3 Layer 200uL 2000rpm Dep 7_10_25.txt") #Use file paths only
-fileB = np.loadtxt(r"C:\Users\anwar\Desktop\NEWFOS DR.LUCAS GROUP FOLDER\Anwar Full Data (7-19\New (Summer) Data\Raman 7_14_25\Raman_Ge15Te85 Solution_7_3_25.txt")
-#fileC = np.loadtxt(r"C:\Users\anwar\Desktop\NEWFOS DR.LUCAS GROUP FOLDER\Anwar Full Data (7-19\New (Summer) Data\Raman 7_14_25\Butylamine.txt")
+fileA = np.loadtxt(r"C:\Users\...") #Use file paths only
+fileB = np.loadtxt(r"C:\Users\...")
+#fileC = np.loadtxt(r"C:\Users\...")
 
-lableA = 'GeTe2 5 layer'
-lableB = 'Ge15Te85 in Butylamine'
+lableA = 'Text'
+lableB = 'H2O'
 
 # Array declaration blocks
 shiftA = fileA[:,0] # x axis
