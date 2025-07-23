@@ -7,13 +7,15 @@ from scipy.interpolate import interp1d
 from pybaselines.whittaker import asls
 import os
 
+pylt.style.use('seaborn-v0_8')
 
-fileA = np.loadtxt(r"C:\Users\...") #Use file paths only
-fileB = np.loadtxt(r"C:\Users\...")
+fileA = np.loadtxt(r"C:\Users\anwar\OneDrive\Desktop\NewFoS\New (Summer) Data\Raman 7_10_25\GeTe2 5 Layer 2000rpm 200uL dep 7_10_25.txt") #Use file paths only
+fileB = np.loadtxt(r"C:\Users\anwar\OneDrive\Desktop\NewFoS\Copies\Raman to Poster\GeTe2 Refernece Lucas.txt")
 #fileC = np.loadtxt(r"C:\Users\...")
 
-lableA = 'Text'
-lableB = 'H2O'
+lableA = 'GeTe2 Thin Film'
+lableB = 'Bulk GeTe2'
+#LableC = ''
 
 # Array declaration blocks
 shiftA = fileA[:,0] # x axis
@@ -81,8 +83,8 @@ peakB = peakpick(IB_normal)
 pylt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 12}) #Global Paramaters for fontsize and font, duh
 
 #Plot spectra lines
-pylt.plot(shiftA, IA_normal, label=lableA, linestyle='-', linewidth=2, color='red') # Plots files, also assigns a legend name and line color
-pylt.plot(shiftB, IB_normal, label=lableB, linestyle='-', linewidth=2, color='blue')
+pylt.plot(shiftA, IA_normal, label=lableA, linestyle='-', linewidth=1.8, color='green') # Plots files, also assigns a legend name and line color
+pylt.plot(shiftB, IB_normal, label=lableB, linestyle='-', linewidth=1.8, color='blue')
 
 #Plot peak values
 pylt.plot(shiftA[peakA], IA_normal[peakA], "x")
@@ -104,7 +106,7 @@ for i in peakB:
 pylt.xlabel("Raman shift (cm⁻¹)", fontsize=14)
 pylt.ylabel("Intensity (a.u.)", fontsize=14)
 
+pylt.grid(True, alpha=0.1, color='gray')
 pylt.legend(loc='upper right', fontsize=12) #calls the legend and asserts its location
-pylt.title("Raman")
 
 pylt.show()
